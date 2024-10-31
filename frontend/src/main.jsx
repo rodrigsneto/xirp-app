@@ -4,10 +4,11 @@ import App from './App'
 
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 
-import Home from './routes/Home'
-import Login from "./routes/Login"
+import Home from './routes/Home/Home'
+import Login from "./routes/Login/Login"
 import ErrorPage from './routes/ErrorPage'
-import LoginDetails from './routes/LoginDetails'
+import EmpresasPage from './routes/EmpresasPage'
+import LoginDetails from './routes/LoginDetails/LoginDetails'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/empresas",
+        element: <EmpresasPage />
       },
       {
         path: "/login",

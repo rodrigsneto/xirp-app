@@ -1,0 +1,21 @@
+.sidebar {
+    background-color: #11344D;
+    width: 100px;
+    height: 679px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar div {
+    color: #FFF;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 60px;
+    height: 50px;
+    background-color: #38556a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

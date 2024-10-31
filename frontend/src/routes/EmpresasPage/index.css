@@ -1,0 +1,26 @@
+.body {
+    display: flex;
+}
+.page-content-area {
+    width: 100%;
+    padding: 10px;
+}
+.page-content {
+    display: flex;
+    padding: 0 10px 10px 10px;
+    flex-direction: column;
+}
+.page-content table td {
+    text-align: center;
+    height: 40px;
+}
+.td-table:not(:last-child) td {
+    border-bottom: 1px inset;
+}
+.page-content table td img {
+    width: 40px;
+}
+.page-content table th {
+    text-align: center;
+    height: 40px;
+}

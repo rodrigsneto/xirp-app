@@ -1,0 +1,12 @@
+.banner {
+    display:flex;
+    background-color: #3D4DDC;
+    width: 100%;
+    height: 52px;
+}
+.banner img {
+    flex-direction: row;
+    width: 100px;
+    right: 40px;
+    left: 40px;
+}
