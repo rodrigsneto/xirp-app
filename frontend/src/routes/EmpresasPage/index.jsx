@@ -14,7 +14,7 @@ const EmpresasPage = () => {
 
     const getEmpresas = async () => {
         try{
-        const res = await axios.get("http://localhost:8800")
+        const res = await axios.get("http://localhost:8800/empresas")
         setEmpresas(res.data.sort((a, b) => (a.nomeFantasia > b.nomeFantasia ? 1 : -1)))
         } catch (error) {
         toast.error(error)

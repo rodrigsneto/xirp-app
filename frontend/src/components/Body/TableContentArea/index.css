@@ -1,6 +1,7 @@
 .page-content-area {
     width: 100%;
     padding: 10px;
+    margin-left: 100px;
 }
 .page-content {
     display: flex;

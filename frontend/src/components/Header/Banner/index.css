@@ -1,8 +1,11 @@
 .banner {
     display:flex;
+    position: inherit;
     background-color: #3D4DDC;
     width: 100%;
     height: 52px;
+    position: fixed;
+    z-index: 1;
 }
 .banner img {
     flex-direction: row;
