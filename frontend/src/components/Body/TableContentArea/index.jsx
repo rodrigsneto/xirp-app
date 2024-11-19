@@ -29,11 +29,14 @@ export const Th = styled.th`
     padding-bottom: 5px;
 `
 
+const LogoImagem = styled.img`
+    width: 30px;
+    border-radius: 8px;
+`
+
 export const Td = styled.td`
-    // padding-top: 15px;
     text-align: "center";
     width: "auto";
-    background-color: #DDD;
 `
 
 const TableContentArea = (props) => {
@@ -76,7 +79,10 @@ const TableContentArea = (props) => {
                         {temPesquisa ? (
                             empresasPesquisadas.map((item, i) => (
                                 <Tr className='td-table' key={i}>
-                                <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
+                                <Td><LogoImagem 
+                                    src={item.logo}
+                                    alt="Logotipo da Empresa"
+                                /></Td>
                                 <Td>{item.nomeFantasia}</Td>
                                 <Td>{item.cnpj}</Td>
                                 <Td>{item.razaoSocial}</Td>
@@ -88,7 +94,10 @@ const TableContentArea = (props) => {
                             ) : (
                             props.empresas.map((item, i) => (
                                 <Tr className='td-table' key={i}>
-                                <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
+                                <Td><LogoImagem 
+                                    src={item.logo}
+                                    alt="Logotipo da Empresa"
+                                /></Td>
                                 <Td>{item.nomeFantasia}</Td>
                                 <Td>{item.cnpj}</Td>
                                 <Td>{item.razaoSocial}</Td>
