@@ -9,7 +9,7 @@ import Login from "./routes/Login/Login"
 import Plantonistas from "./routes/Plantonistas/Plantonistas"
 import ErrorPage from './routes/ErrorPage'
 import EmpresasPage from './routes/EmpresasPage'
-import LoginDetails from './routes/LoginDetails/LoginDetails'
+// import LoginDetails from './routes/LoginDetails/LoginDetails'
 
 const router = createBrowserRouter([
   {
@@ -32,15 +32,17 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />
-      },
-      {
-        path: "/login/:id",
-        element: <LoginDetails/>
-      },
-      {
-        path: "/oldlogin",
-        element: <Navigate to="/login" />
       }
+      // Rota Dinamica
+      // {
+      //   path: "/login/:id",
+      //   element: <LoginDetails/>
+      // },
+      // Redirecionamento
+      // {
+      //   path: "/oldlogin",
+      //   element: <Navigate to="/login" />
+      // }
 
     ]
   }

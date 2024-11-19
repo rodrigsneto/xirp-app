@@ -32,19 +32,6 @@ export const Td = styled.td`
 `
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const TableContentArea = (props) => {
     return (
         <div className='page-content-area'>
@@ -53,15 +40,15 @@ const TableContentArea = (props) => {
                     <caption><Title>Lista de Empresas Clientes</Title></caption>
                     <thead>
                         <tr>
-                            {props.conteudo.map(item => {
-                                return <Th key={item}>{item}</Th>
+                            {props.conteudo.map((item, i) => {
+                                return <Th key={i}>{item}</Th>
                             })}
                         </tr>
                     </thead>
                     <tbody>
                         {props.empresas.map((item, i) => {
                             return(
-                                <Tr className='td-table' key={i} >
+                                <Tr className='td-table' key={i}>
                                     <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
                                     <Td>{item.nomeFantasia}</Td>
                                     <Td>{item.cnpj}</Td>

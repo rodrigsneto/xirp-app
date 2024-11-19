@@ -1,18 +1,19 @@
-import { Link } from "react-router-dom"
+import {useEffect, useState} from "react"
+import LoginPage from "../../components/LoginPage/LoginPage"
 
 function Login() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8800/usuarios')
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(err => console.log(err))
+  }, [])
+
   return (
     <div>
-        <h1>Login</h1>
-        <p>
-          <Link to="/login/1">login 1</Link>
-        </p>
-        <p>
-          <Link to="/login/2">login 2</Link>
-        </p>
-        <p>
-          <Link to="/login/3">login 3</Link>
-        </p>
+      <LoginPage />
     </div>
   )
 }
