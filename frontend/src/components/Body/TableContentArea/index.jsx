@@ -2,7 +2,11 @@ import './index.css'
 import React from "react";
 import styled from "styled-components";
 import {FaTrash, FaEdit} from "react-icons/fa"
+import { useState } from 'react';
 
+const PageContentArea = styled.div`
+    margin-top: 40px;
+`
 
 const Title = styled.h2`
     margin: 10px 0;
@@ -26,15 +30,38 @@ export const Th = styled.th`
 `
 
 export const Td = styled.td`
-    padding-top: 15px;
+    // padding-top: 15px;
     text-align: "center";
     width: "auto";
+    background-color: #DDD;
 `
 
-
 const TableContentArea = (props) => {
+    const [empresasPesquisadas, setEmpresasPesquisadas] = useState([])
+
+    const [temPesquisa, setTemPesquisa] = useState(false)
+
+
     return (
         <div className='page-content-area'>
+            <div>PESQUISA</div>
+            <input type="text" 
+                onBlur={evento => {
+                    const textoDigitado = evento.target.value
+                    const empresasFiltradas = props.empresas.filter(empresa => 
+                        empresa.nomeFantasia.includes(textoDigitado) ||
+                        empresa.cnpj.includes(textoDigitado) ||
+                        empresa.razaoSocial.includes(textoDigitado)
+                    )
+                    setEmpresasPesquisadas(empresasFiltradas)
+                    if (textoDigitado == '') {
+                        setTemPesquisa(false)
+                    } else {
+                        setTemPesquisa(true)
+                    }
+                }}
+            />
+            
             <div className='page-content'>
                 <Table>
                     <caption><Title>Lista de Empresas Clientes</Title></caption>
@@ -46,19 +73,31 @@ const TableContentArea = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.empresas.map((item, i) => {
-                            return(
+                        {temPesquisa ? (
+                            empresasPesquisadas.map((item, i) => (
                                 <Tr className='td-table' key={i}>
-                                    <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
-                                    <Td>{item.nomeFantasia}</Td>
-                                    <Td>{item.cnpj}</Td>
-                                    <Td>{item.razaoSocial}</Td>
-                                    <Td>{item.servicosAtivos}</Td>
-                                    <Td><FaEdit /></Td>
-                                    <Td><FaTrash /></Td>
+                                <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
+                                <Td>{item.nomeFantasia}</Td>
+                                <Td>{item.cnpj}</Td>
+                                <Td>{item.razaoSocial}</Td>
+                                <Td>{item.servicosAtivos}</Td>
+                                <Td><FaEdit /></Td>
+                                <Td><FaTrash /></Td>
                                 </Tr>
-                            )
-                        })}
+                            ))
+                            ) : (
+                            props.empresas.map((item, i) => (
+                                <Tr className='td-table' key={i}>
+                                <Td><img src={item.logo} alt="Logotipo da Empresa" /></Td>
+                                <Td>{item.nomeFantasia}</Td>
+                                <Td>{item.cnpj}</Td>
+                                <Td>{item.razaoSocial}</Td>
+                                <Td>{item.servicosAtivos}</Td>
+                                <Td><FaEdit /></Td>
+                                <Td><FaTrash /></Td>
+                                </Tr>
+                            ))
+                        )}
                     </tbody>
                 </Table>
             </div>
