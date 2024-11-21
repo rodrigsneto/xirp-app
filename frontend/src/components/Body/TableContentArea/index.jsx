@@ -52,9 +52,9 @@ const TableContentArea = (props) => {
                 onBlur={evento => {
                     const textoDigitado = evento.target.value
                     const empresasFiltradas = props.empresas.filter(empresa => 
-                        empresa.nomeFantasia.includes(textoDigitado) ||
-                        empresa.cnpj.includes(textoDigitado) ||
-                        empresa.razaoSocial.includes(textoDigitado)
+                        empresa.nomeFantasia.toLowerCase().includes(textoDigitado.toLowerCase()) ||
+                        empresa.cnpj.toLowerCase().includes(textoDigitado.toLowerCase()) ||
+                        empresa.razaoSocial.toLowerCase().includes(textoDigitado.toLowerCase())
                     )
                     setEmpresasPesquisadas(empresasFiltradas)
                     if (textoDigitado == '') {
