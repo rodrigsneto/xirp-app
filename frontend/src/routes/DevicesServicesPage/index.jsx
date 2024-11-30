@@ -6,7 +6,7 @@ import axios from "axios"
 import { useEffect, useState } from 'react'
 import { toast, ToastContainer } from "react-toastify"
 
-const EmpresasPage = () => {
+const DeviceServicesPage = () => {
     const [empresas, setEmpresas] = useState([]);
     const [onEdit, setOnEdit] = useState(null);
   
@@ -44,4 +44,4 @@ const EmpresasPage = () => {
     )
 }
 
-export default EmpresasPage
+export default DeviceServicesPage
