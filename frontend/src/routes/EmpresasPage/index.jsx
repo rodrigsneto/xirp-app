@@ -1,4 +1,4 @@
-import TableContentArea from '../../components/Body/TableContentArea'
+import CostumersPage from '../../components/Body/CostumersPage'
 import Sidebar from '../../components/Body/Sidebar'
 import './index.css'
 
@@ -37,9 +37,7 @@ const EmpresasPage = () => {
 
     return (
         <div className='body'>
-            <Sidebar/>
-            
-            <TableContentArea conteudo={table} empresas={empresas}/>
+            <CostumersPage conteudo={table} empresas={empresas} sidebarVisible={false}/>
         </div>
     )
 }

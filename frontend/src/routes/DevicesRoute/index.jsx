@@ -1,5 +1,4 @@
 import DeviceServicePage from '../../components/Body/DeviceServicePage'
-import Sidebar from '../../components/Body/Sidebar'
 
 import axios from "axios"
 import { useEffect, useState } from 'react'
@@ -36,9 +35,7 @@ const DevicesRoute = () => {
 
     return (
         <div className='body'>
-            <Sidebar/>
-            
-            <DeviceServicePage conteudo={table} empresas={empresas}/>
+            <DeviceServicePage conteudo={table} empresas={empresas} sidebarVisible={false}/>
         </div>
     )
 }

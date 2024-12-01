@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 
 import Home from './routes/Home/Home'
 import Login from "./routes/Login/Login"
-import Plantonistas from "./routes/Plantonistas/Plantonistas"
+// import Plantonistas from "./routes/Plantonistas/Plantonistas"
 import ErrorPage from './routes/ErrorPage'
 import EmpresasPage from './routes/EmpresasPage'
 import DevicesRoute from './routes/DevicesRoute'
@@ -25,10 +25,10 @@ const router = createBrowserRouter([
         path: "/empresas",
         element: <EmpresasPage />
       },
-      {
-        path: "/plantonistas",
-        element: <Plantonistas />
-      },
+      // {
+      //   path: "/plantonistas",
+      //   element: <Plantonistas />
+      // },
       {
         path: "/equipamentos",
         element: <DevicesRoute />
