@@ -9,8 +9,7 @@ import Login from "./routes/Login/Login"
 import Plantonistas from "./routes/Plantonistas/Plantonistas"
 import ErrorPage from './routes/ErrorPage'
 import EmpresasPage from './routes/EmpresasPage'
-import DeviceServicesPage from './routes/DevicesServicesPage'
-// import LoginDetails from './routes/LoginDetails/LoginDetails'
+import DevicesRoute from './routes/DevicesRoute'
 
 const router = createBrowserRouter([
   {
@@ -32,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/equipamentos",
-        element: <DeviceServicesPage />
+        element: <DevicesRoute />
       },
       {
         path: "/login",

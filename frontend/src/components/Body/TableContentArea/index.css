@@ -4,11 +4,11 @@
     margin-left: 100px;
     margin-top: 50px;
 }
-.page-content {
+/* .page-content {
     display: flex;
     padding: 0 10px 10px 10px;
     flex-direction: column;
-}
+} */
 .td-table:not(:last-child) td {
     border-bottom: 1px inset;
 }

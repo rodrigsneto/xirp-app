@@ -1,12 +1,11 @@
-import TableContentArea from '../../components/Body/TableContentArea'
+import DeviceServicePage from '../../components/Body/DeviceServicePage'
 import Sidebar from '../../components/Body/Sidebar'
-import './index.css'
 
 import axios from "axios"
 import { useEffect, useState } from 'react'
 import { toast, ToastContainer } from "react-toastify"
 
-const DeviceServicesPage = () => {
+const DevicesRoute = () => {
     const [empresas, setEmpresas] = useState([]);
     const [onEdit, setOnEdit] = useState(null);
   
@@ -39,9 +38,9 @@ const DeviceServicesPage = () => {
         <div className='body'>
             <Sidebar/>
             
-            <TableContentArea conteudo={table} empresas={empresas}/>
+            <DeviceServicePage conteudo={table} empresas={empresas}/>
         </div>
     )
 }
 
-export default DeviceServicesPage
+export default DevicesRoute

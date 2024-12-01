@@ -3,11 +3,11 @@
     padding: 10px;
     margin-left: 100px;
 }
-.page-content {
+/* .page-content {
     display: flex;
     padding: 0 10px 10px 10px;
     flex-direction: column;
-}
+} */
 .page-content table td {
     text-align: center;
     height: 40px;

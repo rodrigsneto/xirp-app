@@ -8,12 +8,10 @@ function App() {
 
   return (
     <>
-      <Banner>
-        <Navbar />
-      </Banner>
+      <Banner />
       <Outlet />
-      <hr />
-      Rodapé
+      {/* <hr /> */}
+      {/* Rodapé */}
     </>
   )
 }

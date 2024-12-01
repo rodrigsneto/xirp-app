@@ -2,7 +2,8 @@
     padding-top: 60px;
     background-color: #11344D;
     width: 100px;
-    height: 100vh;
+    height: calc(100vh - 50px);
+    /* height: 100%; */
     position: fixed;
     z-index: 0;
     display: flex;
