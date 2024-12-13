@@ -25,10 +25,10 @@ const router = createBrowserRouter([
         path: "/empresas",
         element: <EmpresasPage />
       },
-      // {
-      //   path: "/plantonistas",
-      //   element: <Plantonistas />
-      // },
+      {
+        path: "/plantonistas",
+        element: <EmpresasPage />
+      },
       {
         path: "/equipamentos",
         element: <DevicesRoute />

@@ -7,14 +7,20 @@ nav div {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(152, 233, 233);
-    height: 40px;
-    padding: 0px 10px;
     margin: 0 10px;
+    border: 2px solid transparent;
     border-radius: 10px;
+    width: 100px;
+    height: 30px;
 }
 .Menu {
     color: black;
-    font-weight: bolder;
+    font-weight: 400;
     text-decoration: none;
+    color: white;
+}
+.Menu:hover {
+    transition: 1s;
+    color: rgb(0, 204, 255);
+    font-size: 18px;
 }

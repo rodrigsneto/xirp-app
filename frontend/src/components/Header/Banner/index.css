@@ -1,5 +1,6 @@
 .banner {
     display:flex;
+    justify-content: space-between;
     position: inherit;
     background-color: #3D4DDC;
     width: 100%;
